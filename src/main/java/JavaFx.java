@@ -19,7 +19,7 @@ public class JavaFx extends Application {
         String version = System.getProperty("javafx.version");
         Label label = new Label("Hello from Javafx" + version);
         TextField hey = new TextField("Heyyy");
-        Label label1 = new Label("Hello from JavaFX: Commit nr 2 " + version);
+        Label label1 = new Label("Hello from JavaFX: Commit nr 21 " + version);
         Label label2 = new Label("Hej IT 62450!");
         Label label3 = new Label("Hej IT 62450!");
         GridPane pane = new GridPane();
