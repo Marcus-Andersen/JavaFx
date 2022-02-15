@@ -1,11 +1,8 @@
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
 import javafx.application.Application;
 import javafx.scene.control.Label;
-import javafx.scene.layout.TilePane;
 import javafx.stage.Stage;
 
 
@@ -18,7 +15,7 @@ public class JavaFx extends Application {
     public void start(Stage stage) throws Exception {
         String version = System.getProperty("javafx.version");
         Label label = new Label("Hello from Javafx" + version);
-        TextField hey = new TextField("Heyyy");
+        TextField hey = new TextField("Heste, heste, Parker er den bedste!");
         Label label1 = new Label("Hello from JavaFX: Commit nr 21 " + version);
         Label label2 = new Label("Hej IT 62450!");
         Label label3 = new Label("Hej IT 62450!");
