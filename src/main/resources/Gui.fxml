@@ -4,10 +4,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<FlowPane
-        orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0"
-        xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiController">
-    <Label>Hej JavaFX!</Label>
+<FlowPane orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiController">
+    <Label text="Hej Niller">Hej JavaFX!</Label>
     <Label fx:id="label2">Det er en fin dag!</Label>
     <Button onMouseClicked="#buttonPressed" text="Hit me!">Tryk på mig!</Button>
     <AnchorPane prefHeight="336.0" prefWidth="335.0">
