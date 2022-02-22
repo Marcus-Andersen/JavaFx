@@ -7,5 +7,6 @@ public class GuiController {
     public Label label2;
 
     public void buttonPressed(MouseEvent mouseEvent) {
+        label2.setText("Starter hjertescanning...");
     }
 }
