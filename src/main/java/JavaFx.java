@@ -17,7 +17,7 @@ public class JavaFx extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Gui.fxml"));
         FlowPane pane = loader.load();
-        Scene scene = new Scene(pane, 240, 100);
+        Scene scene = new Scene(pane, 1000, 800);
         stage.setScene(scene);
         stage.show();
     }

@@ -10,7 +10,7 @@
     <Button onMouseClicked="#buttonPressed" text="Hit me!">Tryk på mig!</Button>
     <AnchorPane prefHeight="303.0" prefWidth="252.0">
         <children>
-            <Polyline fx:id="poly" layoutX="154.0" layoutY="184.0" points="-154.0, -11.0, -116.0, -11.0, -107.0, -24.0, -90.0, -10.0, -75.0, -108.0, -75.0, 51.0, -62.0, -24.0, 5.0, -45.0, 76.0, -10.0" stroke="#30dd15"/>
+            <Polyline fx:id="poly" layoutX="154.0" layoutY="184.0"  stroke="#30dd15"/>
         </children>
     </AnchorPane>
 </FlowPane>
