@@ -16,7 +16,7 @@ public class GuiController {
             @Override
             public void run() {
                 for (double i = -15; i < 60; i++) {
-                    poly.getPoints().addAll(i*10,Math.random()*500);
+                    poly.getPoints().addAll(i*10,Math.random()*300);
                     try{
                         Thread.sleep(500);
                     }
