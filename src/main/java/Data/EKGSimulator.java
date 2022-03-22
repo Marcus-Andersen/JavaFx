@@ -1,9 +1,12 @@
 package Data;
 
 import Business.EKGObserver;
+//hhh
 public class EKGSimulator implements Sims{
     private EKGObserver observer;
-    public static void measure() {
+
+    @Override
+    public void record() {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -21,5 +24,9 @@ public class EKGSimulator implements Sims{
 
             }
         }).start();
+
     }
+
+    @Override
+    public void setObserver(EKGObserver observer) { this.observer = observer; }
 }
