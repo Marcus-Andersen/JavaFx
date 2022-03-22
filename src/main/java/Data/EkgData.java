@@ -1,8 +1,10 @@
 package Data;
 
 public interface EkgData {
-    void setVoltage();
+    void setVoltage(double voltage);
     double getVoltage();
-    void setTime();
-    int getTime();
+    void setTime(double time);
+    double getTime();
+
+
 }

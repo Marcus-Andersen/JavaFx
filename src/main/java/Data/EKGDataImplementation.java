@@ -1,30 +1,32 @@
 package Data;
 
-public class EKGDataImplementation {
+public class EKGDataImplementation implements EkgData{
+    private double time;
+    private double voltage;
 
-    private int time;
+    public EKGDataImplementation(double voltage, double time){
+        this.voltage = voltage;
+        this.time = time;
 
+    }
+    @Override
     public double getVoltage() {
         return voltage;
     }
 
+    @Override
     public void setVoltage(double voltage) {
         this.voltage = voltage;
     }
 
-    private double voltage;
-
-    public int getTime() {
+    @Override
+    public double getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    @Override
+    public void setTime(double time) {
         this.time = time;
     }
 
-    public EKGDataImplementation(double voltage, int time){
-        this.voltage = voltage;
-        this.time = time;
-
-    }
 }

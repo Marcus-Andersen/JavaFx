@@ -2,7 +2,7 @@ package Data;
 
 import Business.EKGObserver;
 public class EKGSimulator implements Sims{
-
+    private EKGObserver observer;
     public static void measure() {
         new Thread(new Runnable() {
             @Override

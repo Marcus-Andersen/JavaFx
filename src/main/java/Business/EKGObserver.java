@@ -3,6 +3,6 @@ package Business;
 import Data.EkgData;
 
 public interface EKGObserver {
-    void observer(EkgData ekgData);
+    void handle(EkgData ekgData);
 
 }
