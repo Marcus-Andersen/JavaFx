@@ -6,9 +6,8 @@
 
 <FlowPane orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiController">
     <Label text="Velkommen til vores UI-prototype">Hej JavaFX!</Label>
-    <Label fx:id="label2" text="Det er en fin dag for en hjertescannning!">Det er en fin dag!</Label>
-    <Button onMouseClicked="#buttonPressed" text="Hit me!">Tryk på mig!</Button>
-    <AnchorPane prefHeight="330.0" prefWidth="585.0">
+    <Button onMouseClicked="#ekgSim" text="EKG">Tryk på mig!</Button>
+    <AnchorPane prefHeight="122.0" prefWidth="176.0">
         <children>
             <Polyline fx:id="poly" layoutX="154.0" layoutY="184.0" stroke="#30dd15" />
         </children>
