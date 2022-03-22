@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<FlowPane orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiController">
+<FlowPane orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.GuiController">
     <Label text="Velkommen til vores UI-prototype">Hej JavaFX!</Label>
     <Button onMouseClicked="#ekgSim" text="EKG">Tryk på mig!</Button>
     <AnchorPane prefHeight="122.0" prefWidth="176.0">

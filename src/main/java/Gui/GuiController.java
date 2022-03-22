@@ -1,18 +1,17 @@
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+package Gui;
+
+import Data.EkgData;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Polyline;
-import javafx.stage.Stage;
 
 public class GuiController {
     public Polyline poly;
-    public Label label2;
 
     public void ekgSim(MouseEvent mouseEvent) {
-        //Simulators.EKGSimulator.measure();
+        //EkgData.ekgData();
+
+
+        //Data.EKGSimulator.measure();
         new Thread(new Runnable() {
             @Override
             public void run() {

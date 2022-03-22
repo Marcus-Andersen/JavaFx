@@ -1,8 +1,7 @@
-package Simulators;
+package Data;
 
-import javafx.scene.shape.Polyline;
-
-public class EKGSimulator {
+import Business.EKGObserver;
+public class EKGSimulator implements Sims{
 
     public static void measure() {
         new Thread(new Runnable() {
@@ -13,7 +12,7 @@ public class EKGSimulator {
                     while(true) {
                         Thread.sleep(500);
                         if (observer != null) {
-                            observer.handle(new EKGDataImpl(Math.random(), Math.random()));
+                            observer.handle(new EKGDataImplementation(Math.random(), (int) Math.random()*10));
                         }
                     }
                 } catch (InterruptedException e) {
