@@ -2,19 +2,14 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 
 <FlowPane orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.GuiController">
     <Label text="Velkommen til vores UI-prototype">Hej JavaFX!</Label>
-   <HBox prefHeight="152.0" prefWidth="135.0">
+   <HBox prefHeight="19.0" prefWidth="307.0">
       <children>
-          <Button onMouseClicked="#ekgSim" text="EKG">Tryk på mig!</Button>
-         <Button mnemonicParsing="false" text="Button" />
+          <Button onMouseClicked="#ekgSim" text="EKG" />
+         <Button mnemonicParsing="false" text="Puls" />
       </children>
    </HBox>
-    <AnchorPane prefHeight="132.0" prefWidth="124.0">
-        <children>
-            <Polyline fx:id="poly" layoutX="154.0" layoutY="184.0" stroke="#30dd15" />
-        </children>
-    </AnchorPane>
+   <TextArea prefHeight="58.0" prefWidth="214.0" />
 </FlowPane>

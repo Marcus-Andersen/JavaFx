@@ -8,10 +8,7 @@ public class GuiController {
     public Polyline poly;
 
     public void ekgSim(MouseEvent mouseEvent) {
-        //EkgData.ekgData();
 
-
-        //Data.EKGSimulator.measure();
         new Thread(new Runnable() {
             @Override
             public void run() {
