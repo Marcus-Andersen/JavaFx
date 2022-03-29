@@ -1,7 +1,7 @@
 package Business;
 
-import Data.EKGSimulator;
-import Data.EkgData;
+import Data.ekg.EKGSimulator;
+import Data.ekg.EkgData;
 import Data.Sims;
 
 public class EkgControllerImpl implements EkgController, EKGObserver{

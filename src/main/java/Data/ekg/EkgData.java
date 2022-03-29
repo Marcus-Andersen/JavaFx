@@ -1,4 +1,4 @@
-package Data;
+package Data.ekg;
 
 public interface EkgData {
     void setVoltage(double voltage);

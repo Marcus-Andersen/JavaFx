@@ -1,8 +1,10 @@
-package Data;
+package Data.ekg;
 
 import Business.EKGObserver;
+import Data.Sims;
+
 //hhh
-public class EKGSimulator implements Sims{
+public class EKGSimulator implements Sims {
     private EKGObserver observer;
 
     @Override

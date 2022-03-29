@@ -1,4 +1,4 @@
-package Data;
+package Data.ekg;
 
 public class EKGDataImplementation implements EkgData{
     private double time;

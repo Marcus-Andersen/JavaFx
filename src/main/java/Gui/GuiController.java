@@ -3,7 +3,7 @@ package Gui;
 import Business.EKGObserver;
 import Business.EkgController;
 import Business.EkgControllerImpl;
-import Data.EkgData;
+import Data.ekg.EkgData;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;

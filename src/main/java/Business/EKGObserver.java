@@ -1,6 +1,6 @@
 package Business;
 
-import Data.EkgData;
+import Data.ekg.EkgData;
 
 public interface EKGObserver {
     void startRecording();
