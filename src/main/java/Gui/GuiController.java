@@ -1,25 +1,25 @@
 package Gui;
 
+import Business.EKGObserver;
+import Business.EkgController;
+import Business.EkgControllerImpl;
 import Data.EkgData;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.shape.Polyline;
 
-public class GuiController {
-    public Polyline poly;
+public class GuiController implements EKGObserver {
+    EkgController ekgController = new EkgControllerImpl();
+    @FXML
+    public TextArea ekgView;
 
-    public void ekgSim(MouseEvent mouseEvent) {
+    public void startEkg(MouseEvent mouseEvent) {
+        ekgController.startRecording();
+        ekgController.registerObserver(this);
+    }
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (double i = -15; i < 60; i++) {
-                    poly.getPoints().addAll(i*10,Math.random()*300);
-                    try{
-                        Thread.sleep(500);
-                    }
-                    catch (Exception e){}
-                }
-            }
-        }).start();
+    @Override
+    public void handle(EkgData ekgData) {
+        ekgView.setText(ekgView.getText()+"\n" + ekgData);
     }
 }
