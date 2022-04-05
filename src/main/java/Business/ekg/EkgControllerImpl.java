@@ -1,10 +1,12 @@
-package Business;
+package Business.ekg;
 
+import Business.ekg.EKGObserver;
+import Business.ekg.EkgController;
 import Data.ekg.EKGSimulator;
 import Data.ekg.EkgData;
-import Data.Sims;
+import Data.ekg.Sims;
 
-public class EkgControllerImpl implements EkgController, EKGObserver{
+public class EkgControllerImpl implements EkgController, EKGObserver {
     Sims ekgDataRecorder = new EKGSimulator();
     private EKGObserver observer;
 

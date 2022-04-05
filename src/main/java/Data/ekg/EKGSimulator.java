@@ -1,7 +1,6 @@
 package Data.ekg;
 
-import Business.EKGObserver;
-import Data.Sims;
+import Business.ekg.EKGObserver;
 
 //hhh
 public class EKGSimulator implements Sims {

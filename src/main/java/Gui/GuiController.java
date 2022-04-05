@@ -1,8 +1,8 @@
 package Gui;
 
-import Business.EKGObserver;
-import Business.EkgController;
-import Business.EkgControllerImpl;
+import Business.ekg.EKGObserver;
+import Business.ekg.EkgController;
+import Business.ekg.EkgControllerImpl;
 import Data.ekg.EkgData;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;

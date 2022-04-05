@@ -1,6 +1,6 @@
-package Data;
+package Data.ekg;
 
-import Business.EKGObserver;
+import Business.ekg.EKGObserver;
 
 public interface Sims {
     void record();

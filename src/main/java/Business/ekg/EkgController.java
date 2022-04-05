@@ -1,4 +1,6 @@
-package Business;
+package Business.ekg;
+
+import Business.ekg.EKGObserver;
 
 public interface EkgController {
     void startRecording();
