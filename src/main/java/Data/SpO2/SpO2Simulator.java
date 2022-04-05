@@ -1,9 +1,10 @@
 package Data.SpO2;
 
 import Business.spo2.SpO2Observer;
-import Data.ekg.Sims;
 
-public class SpO2Simulator implements Sims {
+public class SpO2Simulator implements SpO2DataRecorder {
+    private SpO2Observer spObserver;
+
     @Override
     public void record() {
         new Thread(new Runnable() {
@@ -13,11 +14,14 @@ public class SpO2Simulator implements Sims {
                 int SpO2 = 97;
                 while(true){
                     sp = Math.random();
-                    if (sp =< 0.25){
+                    if (sp <= 0.25){
                         SpO2 -= 1;
                     }
-                    else if (sp => 0.75){
+                    else if (sp >= 0.75){
                         SpO2 += 1;
+                        if (SpO2 > 100){
+                            SpO2 = 99;
+                        }
                     }
                 }
             }
@@ -25,5 +29,5 @@ public class SpO2Simulator implements Sims {
     }
 
     @Override
-    public void setObserver(SpO2Observer spObserver) {this.spObserver;}
+    public void setObserver(SpO2Observer spObserver) {this.spObserver = spObserver;}
 }
