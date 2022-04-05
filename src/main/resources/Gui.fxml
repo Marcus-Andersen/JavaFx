@@ -3,13 +3,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.shape.Polyline?>
 <FlowPane orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.GuiController">
     <Label text="Velkommen til vores UI-prototype">Hej JavaFX!</Label>
    <HBox prefHeight="19.0" prefWidth="307.0">
       <children>
-          <Button onMouseClicked="#ekgSim" text="EKG" />
+          <Button onMouseClicked="#startEkg" text="EKG" />
          <Button mnemonicParsing="false" text="Puls" />
       </children>
    </HBox>
-   <TextArea prefHeight="58.0" prefWidth="214.0" />
+   <TextArea fx:id="ekgView" prefHeight="58.0" prefWidth="214.0" />
+    <Polyline fx:id="polyline"></Polyline>
 </FlowPane>

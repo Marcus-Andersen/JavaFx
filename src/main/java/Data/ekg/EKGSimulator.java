@@ -5,6 +5,7 @@ import Business.ekg.EKGObserver;
 //hhh
 public class EKGSimulator implements Sims {
     private EKGObserver observer;
+    double time;
 
     @Override
     public void record() {
@@ -14,10 +15,13 @@ public class EKGSimulator implements Sims {
                 try {
                     //Dummy data generation
                     while(true) {
+                        time += Math.random();
                         Thread.sleep(500);
                         if (observer != null) {
-                            observer.handle(new EKGDataImplementation(Math.random(), (int) Math.random()*10));
+                            observer.handle(new EKGDataImplementation(Math.random(),  time));
+
                         }
+
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
