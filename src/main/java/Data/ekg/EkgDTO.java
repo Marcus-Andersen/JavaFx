@@ -1,10 +1,10 @@
 package Data.ekg;
 
-public class EKGDataImplementation implements EkgData{
+public class EkgDTO implements EkgData{
     private double time;
     private double voltage;
 
-    public EKGDataImplementation(double voltage, double time){
+    public EkgDTO(double voltage, double time){
         this.voltage = voltage;
         this.time = time;
 

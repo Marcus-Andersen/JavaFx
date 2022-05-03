@@ -1,6 +1,7 @@
 package Business.ekg;
 
 import Data.DatabaseConnector;
+import Data.ekg.EkgDTO;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,9 +12,9 @@ public class SQLImplementation implements EkgDAO {
     public void save(EkgDTO ekgDTO) {
         Connection conn = DatabaseConnector.getConnection();
         try {
-            PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO weatherData(weatherStationId, windSpeed, windDirection, time) VALUES (?,?,?,?)");
-            preparedStatement.setString(1,ekgDTO.getVoltage());
-            preparedStatement.setDouble(2,ekgDTO.getTime());
+            PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO ekgData(voltage, time) VALUES (?,?)");
+            preparedStatement.setDouble(1,ekgDTO.getVoltage());
+            preparedStatement.setString(2,ekgDTO.getTime());
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -29,9 +30,9 @@ public class SQLImplementation implements EkgDAO {
             preparedStatement.setTimestamp(1,time);
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()){
-                ekgDTO ekgDTO = new EkgDTO();
-                ekgDTO.setVoltage(resultSet.getDouble("voltage"));
-                ekgDTO.setTime(resultSet.getTimestamp("time"));
+                EkgDTO ekgDTO = new EkgDTO();
+                EkgDTO.setVoltage(resultSet.getDouble("voltage"));
+                EkgDTO.setTime(resultSet.getTimestamp("time"));
                 data.add(ekgDTO);
             }
         } catch (SQLException e) {

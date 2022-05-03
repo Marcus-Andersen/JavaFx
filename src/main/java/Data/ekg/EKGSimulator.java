@@ -18,7 +18,7 @@ public class EKGSimulator implements Sims {
                         time += Math.random();
                         Thread.sleep(500);
                         if (observer != null) {
-                            observer.handle(new EKGDataImplementation(Math.random(),  time));
+                            observer.handle(new EkgDTO(Math.random(),  time));
 
                         }
 
