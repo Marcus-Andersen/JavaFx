@@ -14,7 +14,7 @@ public class SQLImplementation implements EkgDAO {
         try {
             PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO ekgData(voltage, time) VALUES (?,?)");
             preparedStatement.setDouble(1,ekgDTO.getVoltage());
-            preparedStatement.setString(2,ekgDTO.getTime());
+            preparedStatement.setDouble(2,ekgDTO.getTime());
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
