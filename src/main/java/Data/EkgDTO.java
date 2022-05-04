@@ -1,14 +1,17 @@
-package Data.ekg;
+package Data;
+
+import java.sql.Timestamp;
 
 public class EkgDTO implements EkgData{
-    private double time;
+    private Timestamp time;
     private double voltage;
 
-    public EkgDTO(double voltage, double time){
+    public EkgDTO(double voltage, Timestamp time){
         this.voltage = voltage;
         this.time = time;
 
     }
+
     @Override
     public double getVoltage() {
         return voltage;
@@ -20,12 +23,12 @@ public class EkgDTO implements EkgData{
     }
 
     @Override
-    public double getTime() {
+    public Timestamp getTime() {
         return time;
     }
 
     @Override
-    public void setTime(double time) {
+    public static void setTime(Timestamp time) {
         this.time = time;
     }
 

@@ -1,7 +1,7 @@
 package Business.ekg;
 
 import Data.DatabaseConnector;
-import Data.ekg.EkgDTO;
+import Data.EkgDTO;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class SQLImplementation implements EkgDAO {
         try {
             PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO ekgData(voltage, time) VALUES (?,?)");
             preparedStatement.setDouble(1,ekgDTO.getVoltage());
-            preparedStatement.setDouble(2,ekgDTO.getTime());
+            preparedStatement.setTimestamp(2,ekgDTO.getTime());
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();

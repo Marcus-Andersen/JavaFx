@@ -1,10 +1,13 @@
-package Data.Puls;
+package Data;
 
-import Business.Puls.PulsObserver;
+import Business.ekg.EKGObserver;
 
-public class PulsSimulator implements SimsPuls {
-    private PulsObserver observer;
-    double time;
+import java.sql.Timestamp;
+
+//hhh
+public class EKGSimulator implements Sims {
+    private EKGObserver observer;
+    Timestamp time;
 
     @Override
     public void record() {
@@ -16,8 +19,10 @@ public class PulsSimulator implements SimsPuls {
                     while(true) {
                         Thread.sleep(500);
                         if (observer != null) {
-                            observer.handle(new PulsDataImplementation( (int) Math.random()*10));
+                            observer.handle(new EkgDTO(Math.random(),  time));
+
                         }
+
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -29,5 +34,5 @@ public class PulsSimulator implements SimsPuls {
     }
 
     @Override
-    public void setObserver(PulsObserver observer) { this.observer = observer; }
+    public void setObserver(EKGObserver observer) { this.observer = observer; }
 }

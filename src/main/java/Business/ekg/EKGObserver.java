@@ -1,8 +1,8 @@
 package Business.ekg;
 
-import Data.ekg.EkgData;
+import Data.EkgData;
 
-public interface EKGObserver {
+public interface EKGObserver{
     void handle(EkgData ekgData);
 
 }

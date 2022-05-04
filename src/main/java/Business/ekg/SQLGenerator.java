@@ -1,17 +1,17 @@
 package Business.ekg;
 
-import Data.ekg.EkgDTO;
-import Data.ekg.EkgData;
+import Data.EkgDTO;
 
 import java.sql.Timestamp;
 
-public class SQLGenerator implements EKGObserver {
-    private EkgController ekgData;
+public class SQLGenerator implements EkgObservable {
+    private EkgObservable EkgObservable;
 
     @Override
-    public void handle(EkgData ekgData) {
-        this.ekgData = (EkgController) ekgData;
+    public void register(EKGObserver EkgObserver) {
+        this.EkgObservable = EkgObservable;
     }
+
 
     @Override
     public void run() {

@@ -3,7 +3,7 @@ package Gui;
 import Business.ekg.EKGObserver;
 import Business.ekg.EkgController;
 import Business.ekg.EkgControllerImpl;
-import Data.ekg.EkgData;
+import Data.EkgData;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
@@ -23,6 +23,6 @@ public class GuiController implements EKGObserver {
     @Override
     public void handle(EkgData ekgData) {
         ekgView.setText(ekgView.getText()+"\n" + ekgData);
-        polyline.getPoints().addAll(ekgData.getTime()*100,ekgData.getVoltage()*100);
+        polyline.getPoints().addAll(ekgData.getTime(),ekgData.getVoltage()*100);
     }
 }

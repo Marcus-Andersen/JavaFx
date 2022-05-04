@@ -1,6 +1,8 @@
 package Business.ekg;
 import Data.ekg.EkgDTO;
 
+import Data.EkgDTO;
+
 import java.sql.Timestamp;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package Data.ekg;
+package Data;
 
 import Business.ekg.EKGObserver;
 
