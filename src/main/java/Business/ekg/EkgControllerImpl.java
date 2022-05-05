@@ -21,7 +21,7 @@ public class EkgControllerImpl implements EkgController, EKGObserver {
         if(observer != null){
             observer.handle(ekgData);
         }
-        //ToDO put data in database
+
         ekgDAO.save(ekgData);
     }
 }
