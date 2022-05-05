@@ -12,6 +12,9 @@ public class EkgDTO implements EkgData{
 
     }
 
+    public EkgDTO() {
+    }
+
     @Override
     public double getVoltage() {
         return voltage;
@@ -23,13 +26,9 @@ public class EkgDTO implements EkgData{
     }
 
     @Override
-    public Timestamp getTime() {
-        return time;
-    }
+    public Timestamp getTime() { return time; }
 
     @Override
-    public static void setTime(Timestamp time) {
-        this.time = time;
-    }
+    public void setTime(Timestamp time) { this.time = time; }
 
 }

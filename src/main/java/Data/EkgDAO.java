@@ -1,13 +1,10 @@
-package Business.ekg;
-import Data.ekg.EkgDTO;
-
-import Data.EkgDTO;
+package Data;
 
 import java.sql.Timestamp;
 import java.util.List;
 
 public interface EkgDAO {
-    void save(EkgDTO ekgDTO);
+    void save(EkgData ekgDTO);
 
     List<EkgDTO> load(Timestamp time);
 }

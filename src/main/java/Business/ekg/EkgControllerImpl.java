@@ -1,12 +1,11 @@
 package Business.ekg;
 
-import Data.EKGSimulator;
-import Data.EkgData;
-import Data.Sims;
+import Data.*;
 
 public class EkgControllerImpl implements EkgController, EKGObserver {
     Sims ekgDataRecorder = new EKGSimulator();
     private EKGObserver observer;
+    private EkgDAO ekgDAO = new SQLImplementation();
 
     @Override
     public void startRecording(){
@@ -22,5 +21,7 @@ public class EkgControllerImpl implements EkgController, EKGObserver {
         if(observer != null){
             observer.handle(ekgData);
         }
+        //ToDO put data in database
+        ekgDAO.save(ekgData);
     }
 }

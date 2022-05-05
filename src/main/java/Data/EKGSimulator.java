@@ -7,7 +7,6 @@ import java.sql.Timestamp;
 //hhh
 public class EKGSimulator implements Sims {
     private EKGObserver observer;
-    Timestamp time;
 
     @Override
     public void record() {
@@ -19,7 +18,7 @@ public class EKGSimulator implements Sims {
                     while(true) {
                         Thread.sleep(500);
                         if (observer != null) {
-                            observer.handle(new EkgDTO(Math.random(),  time));
+                            observer.handle(new EkgDTO(Math.random(),  new Timestamp(System.currentTimeMillis())));
 
                         }
 
